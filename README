@@ -1,0 +1,15 @@
+`raug' is a utility for real niche applications. Normally you would use `su'
+for anything `raug` can do.
+
+The niche case where `raug' might be useful is when you want to use the
+`pam_exec' PAM-module to execute a command as the user authenticating, e.g.
+
+session optional pam_exec.so /usr/sbin/raug -U PAM_USER /path/to/myscript
+
+In this case you could also use `su' in the script where needed, but then
+you would be able to use this in su's own PAM-stack as this would create 
+a recursive mess. In this case `raug' comes to the rescue, and the script
+you would want to execute becomes a little simpler as a bonus.
+
+EOF
+

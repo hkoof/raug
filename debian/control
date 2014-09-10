@@ -1,0 +1,23 @@
+Source: raug
+Section: admin
+Priority: extra
+Maintainer: Heiko Noordhof <h.e.noordhof@rug.nl>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+
+Package: raug
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Run As User-Group
+ raug is a simple utility that allows the superuser to run
+ commands as a different user and/or group. The user and/or
+ group can be specified directly on the command line or by
+ specifying environment variables to read the user/group
+ from.
+ .
+ This utility can be used to run some command as the user
+ logging in using the pam_exec PAM module. While this could
+ also be done with `su', it would then be problematic to use
+ pam_exec from the PAM-stack for the `su' command. Indeed this
+ is a corner case...
+
