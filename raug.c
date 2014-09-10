@@ -151,6 +151,7 @@ Options:\n\
                             variable ENVVAR\n\
    -G --group-envvar=ENVVAR run COMMAND as user read from environment\n\
                             variable ENVVAR\n\
+      --verbose             print to stdout what is done\n\
       --help                display this help and exit\n\
       --version             output version information and exit\n\
 \n\
