@@ -166,6 +166,11 @@ Options:\n\
         exit(2);
     }
 
+    if (argv[optind][0] != '/') {
+        fprintf(stderr, "A full path to the command is required.\n");
+        exit(1);
+    }
+
     if (getuid() != 0) {
         fprintf(stderr, "Running %s only makes sense for root, which you are not.\n", progname);
         exit(1);
