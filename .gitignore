@@ -1,0 +1,9 @@
+# Object files
+raug
+*.o
+
+# debian package build files
+debian/files
+debian/raug.debhelper.log
+debian/raug.substvars
+debian/raug/
