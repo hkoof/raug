@@ -171,6 +171,13 @@ Options:\n\
         exit(1);
     }
 
+    /* Change working directory to the root directory (/)/ */
+    message("Changing working directory to /\n");
+    if (chdir("/") < 0) {
+       perror("Error changing working directory to /");
+       exit(1);
+    }
+
     /* Change GID first, since we may lose permission to do so if we change UID first. */
 
     /* Find out what GID we need to set */
